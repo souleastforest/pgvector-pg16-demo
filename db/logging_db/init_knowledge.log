@@ -1,0 +1,32 @@
+2024-02-03 21:56:17,617-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[66]:Load pretrained SentenceTransformer: multi-qa-MiniLM-L6-cos-v1
+2024-02-03 21:56:18,295-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[105]:Use pytorch device: cuda
+2024-02-03 21:56:18,297-root-INFO-init_knowledge[105]:collection_dict init start
+2024-02-03 21:56:18,299-root-INFO-init_knowledge[138]:bronya not created hasKnowledge=True
+2024-02-03 21:56:19,120-root-INFO-init_knowledge[138]:gwen not created hasKnowledge=True
+2024-02-03 21:56:19,303-root-INFO-init_knowledge[138]:hutao not created hasKnowledge=True
+2024-02-03 21:56:19,440-root-INFO-init_knowledge[138]:paimon not created hasKnowledge=True
+2024-02-03 21:56:19,530-root-INFO-init_knowledge[138]:silverwolf not created hasKnowledge=True
+2024-02-03 21:56:19,789-root-INFO-init_knowledge[138]:klee not created hasKnowledge=True
+2024-02-03 21:56:19,960-root-INFO-init_knowledge[138]:kokomi not created hasKnowledge=True
+2024-02-03 21:56:20,056-root-INFO-init_knowledge[138]:ganyu not created hasKnowledge=False
+2024-02-03 21:56:20,056-root-INFO-init_knowledge[138]:kafka not created hasKnowledge=False
+2024-02-03 21:56:20,057-root-INFO-init_knowledge[138]:kirara not created hasKnowledge=False
+2024-02-03 21:56:20,057-root-INFO-init_knowledge[138]:walnut not created hasKnowledge=False
+2024-02-03 21:56:20,057-root-INFO-init_knowledge[138]:yorforger not created hasKnowledge=False
+2024-02-03 21:56:20,058-root-INFO-init_knowledge[156]:collection_dict=0
+2024-02-03 22:06:05,984-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[66]:Load pretrained SentenceTransformer: multi-qa-MiniLM-L6-cos-v1
+2024-02-03 22:06:06,561-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[105]:Use pytorch device: cuda
+2024-02-03 22:06:06,563-root-INFO-init_knowledge[105]:collection_dict init start
+2024-02-03 22:06:06,564-root-INFO-init_knowledge[138]:bronya not created hasKnowledge=True
+2024-02-03 22:06:07,443-root-INFO-init_knowledge[138]:gwen not created hasKnowledge=True
+2024-02-03 22:06:07,623-root-INFO-init_knowledge[138]:hutao not created hasKnowledge=True
+2024-02-03 22:06:07,741-root-INFO-init_knowledge[138]:paimon not created hasKnowledge=True
+2024-02-03 22:06:07,824-root-INFO-init_knowledge[138]:silverwolf not created hasKnowledge=True
+2024-02-03 22:06:08,071-root-INFO-init_knowledge[138]:klee not created hasKnowledge=True
+2024-02-03 22:06:08,237-root-INFO-init_knowledge[138]:kokomi not created hasKnowledge=True
+2024-02-03 22:06:08,353-root-INFO-init_knowledge[138]:ganyu not created hasKnowledge=False
+2024-02-03 22:06:08,353-root-INFO-init_knowledge[138]:kafka not created hasKnowledge=False
+2024-02-03 22:06:08,355-root-INFO-init_knowledge[138]:kirara not created hasKnowledge=False
+2024-02-03 22:06:08,355-root-INFO-init_knowledge[138]:walnut not created hasKnowledge=False
+2024-02-03 22:06:08,355-root-INFO-init_knowledge[138]:yorforger not created hasKnowledge=False
+2024-02-03 22:06:08,356-root-INFO-init_knowledge[156]:collection_dict=0

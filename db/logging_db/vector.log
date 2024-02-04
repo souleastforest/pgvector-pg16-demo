@@ -1,0 +1,428 @@
+2024-02-03 00:47:26,810-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[66]:Load pretrained SentenceTransformer: multi-qa-MiniLM-L6-cos-v1
+2024-02-03 00:48:07,724-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[66]:Load pretrained SentenceTransformer: multi-qa-MiniLM-L6-cos-v1
+2024-02-03 00:49:21,007-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[66]:Load pretrained SentenceTransformer: multi-qa-MiniLM-L6-cos-v1
+2024-02-03 00:53:40,073-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[66]:Load pretrained SentenceTransformer: multi-qa-MiniLM-L6-cos-v1
+2024-02-03 00:53:55,239-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[66]:Load pretrained SentenceTransformer: multi-qa-MiniLM-L6-cos-v1
+2024-02-03 00:54:21,604-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[105]:Use pytorch device: cuda
+2024-02-03 00:54:21,607-root-INFO-server_pgvector[103]:collection_dict init start
+2024-02-03 00:54:21,607-root-INFO-server_pgvector[133]:bronya not created hasKnowledge=True
+2024-02-03 00:54:22,334-root-INFO-server_pgvector[133]:gwen not created hasKnowledge=True
+2024-02-03 00:54:22,496-root-INFO-server_pgvector[133]:hutao not created hasKnowledge=True
+2024-02-03 00:54:22,619-root-INFO-server_pgvector[133]:paimon not created hasKnowledge=True
+2024-02-03 00:54:22,697-root-INFO-server_pgvector[133]:silverwolf not created hasKnowledge=True
+2024-02-03 00:54:22,960-root-INFO-server_pgvector[133]:klee not created hasKnowledge=True
+2024-02-03 00:54:23,108-root-INFO-server_pgvector[133]:kokomi not created hasKnowledge=True
+2024-02-03 00:54:23,218-root-INFO-server_pgvector[133]:ganyu not created hasKnowledge=False
+2024-02-03 00:54:23,218-root-INFO-server_pgvector[133]:kafka not created hasKnowledge=False
+2024-02-03 00:54:23,218-root-INFO-server_pgvector[133]:kirara not created hasKnowledge=False
+2024-02-03 00:54:23,220-root-INFO-server_pgvector[133]:walnut not created hasKnowledge=False
+2024-02-03 00:54:23,220-root-INFO-server_pgvector[133]:yorforger not created hasKnowledge=False
+2024-02-03 00:54:23,220-root-INFO-server_pgvector[151]:collection_dict=0
+2024-02-03 13:54:00,631-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[66]:Load pretrained SentenceTransformer: multi-qa-MiniLM-L6-cos-v1
+2024-02-03 13:54:01,301-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[105]:Use pytorch device: cuda
+2024-02-03 13:54:01,331-root-INFO-server_pgvector[102]:collection_dict init start
+2024-02-03 13:54:01,334-root-INFO-server_pgvector[135]:bronya not created hasKnowledge=True
+2024-02-03 13:54:02,401-root-INFO-server_pgvector[135]:gwen not created hasKnowledge=True
+2024-02-03 13:54:02,576-root-INFO-server_pgvector[135]:hutao not created hasKnowledge=True
+2024-02-03 13:54:02,720-root-INFO-server_pgvector[135]:paimon not created hasKnowledge=True
+2024-02-03 13:54:02,809-root-INFO-server_pgvector[135]:silverwolf not created hasKnowledge=True
+2024-02-03 13:54:03,089-root-INFO-server_pgvector[135]:klee not created hasKnowledge=True
+2024-02-03 13:54:03,261-root-INFO-server_pgvector[135]:kokomi not created hasKnowledge=True
+2024-02-03 13:54:03,365-root-INFO-server_pgvector[135]:ganyu not created hasKnowledge=False
+2024-02-03 13:54:03,365-root-INFO-server_pgvector[135]:kafka not created hasKnowledge=False
+2024-02-03 13:54:03,366-root-INFO-server_pgvector[135]:kirara not created hasKnowledge=False
+2024-02-03 13:54:03,366-root-INFO-server_pgvector[135]:walnut not created hasKnowledge=False
+2024-02-03 13:54:03,366-root-INFO-server_pgvector[135]:yorforger not created hasKnowledge=False
+2024-02-03 13:54:03,367-root-INFO-server_pgvector[153]:collection_dict=0
+2024-02-03 23:17:10,954-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[66]:Load pretrained SentenceTransformer: multi-qa-MiniLM-L6-cos-v1
+2024-02-03 23:17:11,717-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[105]:Use pytorch device: cuda
+2024-02-03 23:17:11,719-root-INFO-server_pgvector[102]:collection_dict init start
+2024-02-03 23:23:20,635-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[66]:Load pretrained SentenceTransformer: multi-qa-MiniLM-L6-cos-v1
+2024-02-03 23:23:21,414-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[105]:Use pytorch device: cuda
+2024-02-03 23:23:21,417-root-INFO-server_pgvector[102]:collection_dict init start
+2024-02-03 23:23:21,421-root-INFO-server_pgvector[149]:bronya created
+2024-02-03 23:23:22,558-root-INFO-server_pgvector[149]:gwen created
+2024-02-03 23:23:22,671-root-INFO-server_pgvector[149]:hutao created
+2024-02-03 23:23:22,730-root-INFO-server_pgvector[149]:paimon created
+2024-02-03 23:23:22,752-root-INFO-server_pgvector[149]:silverwolf created
+2024-02-03 23:23:22,799-root-INFO-server_pgvector[149]:klee created
+2024-02-03 23:23:22,822-root-INFO-server_pgvector[149]:kokomi created
+2024-02-03 23:23:22,838-root-INFO-server_pgvector[135]:ganyu not created hasKnowledge=False
+2024-02-03 23:23:22,838-root-INFO-server_pgvector[135]:kafka not created hasKnowledge=False
+2024-02-03 23:23:22,838-root-INFO-server_pgvector[135]:kirara not created hasKnowledge=False
+2024-02-03 23:23:22,838-root-INFO-server_pgvector[135]:walnut not created hasKnowledge=False
+2024-02-03 23:23:22,838-root-INFO-server_pgvector[135]:yorforger not created hasKnowledge=False
+2024-02-03 23:23:22,838-root-INFO-server_pgvector[153]:collection_dict=7
+2024-02-03 23:23:34,834-root-INFO-server_pgvector[357]:server listen at: 0.0.0.0:10201
+2024-02-03 23:24:18,882-root-INFO-server_pgvector[257]:2024-02-03 23:24:18.882055 receive request client=('127.0.0.1', 31082) param={
+    "type": "insert",
+    "userId": "0",
+    "roleName": "paimon",
+    "question": "what's your partner name?",
+    "answer": "my partner name is Traveler.",
+    "id": 1002
+} 
+2024-02-03 23:24:57,913-root-ERROR-server_pgvector[306]:cannot adapt type 'ndarray' using placeholder '%s' (format: AUTO)
+Traceback (most recent call last):
+  File "G:\Devs\AI_Project\Embedding\pgvector-pg16-demo\server_pgvector.py", line 301, in do_POST
+    cur.execute("INSERT INTO documents (userRole, knowledge, embedding) VALUES (%s, %s, %s)", (f"{user_id}-{role_name}", question, embedding))
+  File "G:\anaconda\envs\chromadb\lib\site-packages\psycopg\cursor.py", line 732, in execute
+    raise ex.with_traceback(None)
+psycopg.ProgrammingError: cannot adapt type 'ndarray' using placeholder '%s' (format: AUTO)
+Stack (most recent call last):
+  File "G:/Program Files/JetBrains/PyCharm 2022.2.3/plugins/python/helpers/pydev/pydevd.py", line 2195, in <module>
+    main()
+  File "G:/Program Files/JetBrains/PyCharm 2022.2.3/plugins/python/helpers/pydev/pydevd.py", line 2177, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "G:/Program Files/JetBrains/PyCharm 2022.2.3/plugins/python/helpers/pydev/pydevd.py", line 1489, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "G:/Program Files/JetBrains/PyCharm 2022.2.3/plugins/python/helpers/pydev/pydevd.py", line 1496, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "G:\Program Files\JetBrains\PyCharm 2022.2.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "G:\Devs\AI_Project\Embedding\pgvector-pg16-demo\server_pgvector.py", line 358, in <module>
+    server.serve_forever()
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 237, in serve_forever
+    self._handle_request_noblock()
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "G:\anaconda\envs\chromadb\lib\http\server.py", line 435, in handle
+    self.handle_one_request()
+  File "G:\anaconda\envs\chromadb\lib\http\server.py", line 423, in handle_one_request
+    method()
+  File "G:\Devs\AI_Project\Embedding\pgvector-pg16-demo\server_pgvector.py", line 306, in do_POST
+    logging.error(e, exc_info=True, stack_info=True)
+2024-02-03 23:24:59,374-root-INFO-server_pgvector[347]:type=insert cost_time=40.492039918899536
+2024-02-03 23:32:10,011-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[66]:Load pretrained SentenceTransformer: multi-qa-MiniLM-L6-cos-v1
+2024-02-03 23:32:10,760-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[105]:Use pytorch device: cuda
+2024-02-03 23:32:10,762-root-INFO-server_pgvector[102]:collection_dict init start
+2024-02-03 23:32:10,767-root-INFO-server_pgvector[149]:bronya created
+2024-02-03 23:32:12,042-root-INFO-server_pgvector[149]:gwen created
+2024-02-03 23:32:12,124-root-INFO-server_pgvector[149]:hutao created
+2024-02-03 23:32:12,182-root-INFO-server_pgvector[149]:paimon created
+2024-02-03 23:32:12,203-root-INFO-server_pgvector[149]:silverwolf created
+2024-02-03 23:32:12,247-root-INFO-server_pgvector[149]:klee created
+2024-02-03 23:32:12,272-root-INFO-server_pgvector[149]:kokomi created
+2024-02-03 23:32:12,292-root-INFO-server_pgvector[135]:ganyu not created hasKnowledge=False
+2024-02-03 23:32:12,292-root-INFO-server_pgvector[135]:kafka not created hasKnowledge=False
+2024-02-03 23:32:12,292-root-INFO-server_pgvector[135]:kirara not created hasKnowledge=False
+2024-02-03 23:32:12,292-root-INFO-server_pgvector[135]:walnut not created hasKnowledge=False
+2024-02-03 23:32:12,292-root-INFO-server_pgvector[135]:yorforger not created hasKnowledge=False
+2024-02-03 23:32:12,293-root-INFO-server_pgvector[153]:collection_dict=7
+2024-02-03 23:32:24,294-root-INFO-server_pgvector[357]:server listen at: 0.0.0.0:10201
+2024-02-03 23:36:11,359-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[66]:Load pretrained SentenceTransformer: multi-qa-MiniLM-L6-cos-v1
+2024-02-03 23:36:12,048-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[105]:Use pytorch device: cuda
+2024-02-03 23:36:24,036-root-INFO-server_pgvector[360]:server listen at: 0.0.0.0:10201
+2024-02-03 23:37:00,132-root-INFO-server_pgvector[257]:2024-02-03 23:37:00.132921 receive request client=('127.0.0.1', 32488) param={
+    "type": "insert",
+    "userId": "0",
+    "roleName": "paimon",
+    "question": "what's your partner name?",
+    "answer": "my partner name is Traveler.",
+    "id": 1002
+} 
+2024-02-03 23:37:22,458-root-ERROR-server_pgvector[307]:cannot adapt type 'ndarray' using placeholder '%s' (format: AUTO)
+Traceback (most recent call last):
+  File "G:\Devs\AI_Project\Embedding\pgvector-pg16-demo\server_pgvector.py", line 301, in do_POST
+    cur.execute("INSERT INTO documents (userRole, knowledge, embedding) VALUES (%(userRole)s, %(knowledge)s, %(embedding)s)", {'userRole': f"{user_id}-{role_name}", 'knowledge': question, 'embedding':embedding})
+  File "G:\anaconda\envs\chromadb\lib\site-packages\psycopg\cursor.py", line 732, in execute
+    raise ex.with_traceback(None)
+psycopg.ProgrammingError: cannot adapt type 'ndarray' using placeholder '%s' (format: AUTO)
+Stack (most recent call last):
+  File "G:/Program Files/JetBrains/PyCharm 2022.2.3/plugins/python/helpers/pydev/pydevd.py", line 2195, in <module>
+    main()
+  File "G:/Program Files/JetBrains/PyCharm 2022.2.3/plugins/python/helpers/pydev/pydevd.py", line 2177, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "G:/Program Files/JetBrains/PyCharm 2022.2.3/plugins/python/helpers/pydev/pydevd.py", line 1489, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "G:/Program Files/JetBrains/PyCharm 2022.2.3/plugins/python/helpers/pydev/pydevd.py", line 1496, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "G:\Program Files\JetBrains\PyCharm 2022.2.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "G:\Devs\AI_Project\Embedding\pgvector-pg16-demo\server_pgvector.py", line 361, in <module>
+    server.serve_forever()
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 237, in serve_forever
+    self._handle_request_noblock()
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "G:\anaconda\envs\chromadb\lib\http\server.py", line 435, in handle
+    self.handle_one_request()
+  File "G:\anaconda\envs\chromadb\lib\http\server.py", line 423, in handle_one_request
+    method()
+  File "G:\Devs\AI_Project\Embedding\pgvector-pg16-demo\server_pgvector.py", line 307, in do_POST
+    logging.error(e, exc_info=True, stack_info=True)
+2024-02-03 23:37:23,629-root-INFO-server_pgvector[350]:type=insert cost_time=23.49629497528076
+2024-02-03 23:44:13,637-root-INFO-server_pgvector[257]:2024-02-03 23:44:13.637564 receive request client=('127.0.0.1', 33262) param={
+    "type": "insert",
+    "userId": "0",
+    "roleName": "paimon",
+    "question": "what's your partner name?",
+    "answer": "my partner name is Traveler.",
+    "id": 1002
+} 
+2024-02-04 00:00:10,928-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[66]:Load pretrained SentenceTransformer: multi-qa-MiniLM-L6-cos-v1
+2024-02-04 00:00:11,670-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[105]:Use pytorch device: cuda
+2024-02-04 00:00:23,661-root-INFO-server_pgvector[361]:server listen at: 0.0.0.0:10201
+2024-02-04 00:00:37,734-root-INFO-server_pgvector[257]:2024-02-04 00:00:37.734106 receive request client=('127.0.0.1', 35067) param={
+    "type": "insert",
+    "userId": "0",
+    "roleName": "paimon",
+    "question": "what's your partner name?",
+    "answer": "my partner name is Traveler.",
+    "id": 1002
+} 
+2024-02-04 00:01:47,168-root-INFO-server_pgvector[351]:type=insert cost_time=69.43468284606934
+2024-02-04 00:04:56,161-root-INFO-server_pgvector[257]:2024-02-04 00:04:56.161074 receive request client=('127.0.0.1', 35789) param={
+    "type": "insert",
+    "userId": "0",
+    "roleName": "paimon",
+    "question": "what's your partner name?",
+    "answer": "my partner name is Traveler.",
+    "id": 1002
+} 
+2024-02-04 00:05:12,183-root-INFO-server_pgvector[351]:type=insert cost_time=16.022680044174194
+2024-02-04 00:08:58,349-root-INFO-server_pgvector[257]:2024-02-04 00:08:58.349573 receive request client=('127.0.0.1', 36529) param={
+    "type": "query",
+    "userId": "0",
+    "roleName": "paimon",
+    "question": "is a character named by some food for fun?"
+} 
+2024-02-04 00:08:58,350-root-INFO-server_pgvector[102]:collection_dict init start
+2024-02-04 00:08:58,365-root-INFO-server_pgvector[149]:bronya created
+2024-02-04 00:08:58,401-root-INFO-server_pgvector[149]:gwen created
+2024-02-04 00:08:58,571-root-INFO-server_pgvector[149]:hutao created
+2024-02-04 00:08:58,650-root-INFO-server_pgvector[149]:paimon created
+2024-02-04 00:08:58,685-root-INFO-server_pgvector[149]:silverwolf created
+2024-02-04 00:08:58,741-root-INFO-server_pgvector[149]:klee created
+2024-02-04 00:08:58,769-root-INFO-server_pgvector[149]:kokomi created
+2024-02-04 00:08:58,795-root-INFO-server_pgvector[135]:ganyu not created hasKnowledge=False
+2024-02-04 00:08:58,796-root-INFO-server_pgvector[135]:kafka not created hasKnowledge=False
+2024-02-04 00:08:58,796-root-INFO-server_pgvector[135]:kirara not created hasKnowledge=False
+2024-02-04 00:08:58,796-root-INFO-server_pgvector[135]:walnut not created hasKnowledge=False
+2024-02-04 00:08:58,796-root-INFO-server_pgvector[135]:yorforger not created hasKnowledge=False
+2024-02-04 00:08:58,796-root-INFO-server_pgvector[153]:collection_dict=7
+2024-02-04 00:09:30,286-root-ERROR-server_pgvector[339]:'Cursor' object is not subscriptable
+Traceback (most recent call last):
+  File "G:\Devs\AI_Project\Embedding\pgvector-pg16-demo\server_pgvector.py", line 333, in do_POST
+    and result2[0] is not None \
+TypeError: 'Cursor' object is not subscriptable
+Stack (most recent call last):
+  File "G:/Program Files/JetBrains/PyCharm 2022.2.3/plugins/python/helpers/pydev/pydevd.py", line 2195, in <module>
+    main()
+  File "G:/Program Files/JetBrains/PyCharm 2022.2.3/plugins/python/helpers/pydev/pydevd.py", line 2177, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "G:/Program Files/JetBrains/PyCharm 2022.2.3/plugins/python/helpers/pydev/pydevd.py", line 1489, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "G:/Program Files/JetBrains/PyCharm 2022.2.3/plugins/python/helpers/pydev/pydevd.py", line 1496, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "G:\Program Files\JetBrains\PyCharm 2022.2.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "G:\Devs\AI_Project\Embedding\pgvector-pg16-demo\server_pgvector.py", line 362, in <module>
+    server.serve_forever()
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 237, in serve_forever
+    self._handle_request_noblock()
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "G:\anaconda\envs\chromadb\lib\http\server.py", line 435, in handle
+    self.handle_one_request()
+  File "G:\anaconda\envs\chromadb\lib\http\server.py", line 423, in handle_one_request
+    method()
+  File "G:\Devs\AI_Project\Embedding\pgvector-pg16-demo\server_pgvector.py", line 339, in do_POST
+    logging.error(e, exc_info=True, stack_info=True)
+2024-02-04 00:09:31,294-root-INFO-server_pgvector[351]:type=query cost_time=32.94495415687561
+2024-02-04 00:13:47,040-root-INFO-server_pgvector[257]:2024-02-04 00:13:47.040444 receive request client=('127.0.0.1', 37240) param={
+    "type": "query",
+    "userId": "0",
+    "roleName": "paimon",
+    "question": "is a character named by some food for fun?"
+} 
+2024-02-04 00:13:47,040-root-INFO-server_pgvector[100]:collection_dict init done
+2024-02-04 00:13:47,070-root-ERROR-server_pgvector[339]:'Cursor' object is not subscriptable
+Traceback (most recent call last):
+  File "G:\Devs\AI_Project\Embedding\pgvector-pg16-demo\server_pgvector.py", line 333, in do_POST
+    and result2[0] is not None \
+TypeError: 'Cursor' object is not subscriptable
+Stack (most recent call last):
+  File "G:/Program Files/JetBrains/PyCharm 2022.2.3/plugins/python/helpers/pydev/pydevd.py", line 2195, in <module>
+    main()
+  File "G:/Program Files/JetBrains/PyCharm 2022.2.3/plugins/python/helpers/pydev/pydevd.py", line 2177, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "G:/Program Files/JetBrains/PyCharm 2022.2.3/plugins/python/helpers/pydev/pydevd.py", line 1489, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "G:/Program Files/JetBrains/PyCharm 2022.2.3/plugins/python/helpers/pydev/pydevd.py", line 1496, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "G:\Program Files\JetBrains\PyCharm 2022.2.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "G:\Devs\AI_Project\Embedding\pgvector-pg16-demo\server_pgvector.py", line 362, in <module>
+    server.serve_forever()
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 237, in serve_forever
+    self._handle_request_noblock()
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "G:\anaconda\envs\chromadb\lib\http\server.py", line 435, in handle
+    self.handle_one_request()
+  File "G:\anaconda\envs\chromadb\lib\http\server.py", line 423, in handle_one_request
+    method()
+  File "G:\Devs\AI_Project\Embedding\pgvector-pg16-demo\server_pgvector.py", line 339, in do_POST
+    logging.error(e, exc_info=True, stack_info=True)
+2024-02-04 00:13:47,070-root-INFO-server_pgvector[351]:type=query cost_time=0.029728174209594727
+2024-02-04 00:14:29,728-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[66]:Load pretrained SentenceTransformer: multi-qa-MiniLM-L6-cos-v1
+2024-02-04 00:14:30,535-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[105]:Use pytorch device: cuda
+2024-02-04 00:14:42,525-root-INFO-server_pgvector[361]:server listen at: 0.0.0.0:10201
+2024-02-04 00:16:59,759-root-INFO-server_pgvector[257]:2024-02-04 00:16:59.759558 receive request client=('127.0.0.1', 37771) param={
+    "roleName": "0-paimon"
+} 
+2024-02-04 00:16:59,760-root-INFO-server_pgvector[268]:empty param
+2024-02-04 00:17:57,499-root-INFO-server_pgvector[257]:2024-02-04 00:17:57.499342 receive request client=('127.0.0.1', 38023) param={
+    "roleName": "0-paimon"
+} 
+2024-02-04 00:17:57,499-root-INFO-server_pgvector[268]:empty param
+2024-02-04 00:19:15,614-root-INFO-server_pgvector[257]:2024-02-04 00:19:15.614263 receive request client=('127.0.0.1', 38270) param={
+    "type": "clean",
+    "userId": "0",
+    "roleName": "0-paimon",
+    "question": "what's your partner name?",
+    "answer": "my partner name is Traveler.",
+    "id": 1002
+} 
+2024-02-04 00:19:20,947-root-INFO-server_pgvector[351]:type=clean cost_time=5.332842826843262
+2024-02-04 00:20:47,392-root-INFO-server_pgvector[257]:2024-02-04 00:20:47.392017 receive request client=('127.0.0.1', 38522) param={
+    "type": "clean",
+    "userId": "0",
+    "roleName": "0-paimon",
+    "question": "what's your partner name?",
+    "answer": "my partner name is Traveler.",
+    "id": 1002
+} 
+2024-02-04 00:21:07,322-root-INFO-server_pgvector[351]:type=clean cost_time=19.93013310432434
+2024-02-04 00:21:11,842-root-INFO-server_pgvector[257]:2024-02-04 00:21:11.842369 receive request client=('127.0.0.1', 38587) param={
+    "type": "clean",
+    "userId": "0",
+    "roleName": "paimon",
+    "question": "what's your partner name?",
+    "answer": "my partner name is Traveler.",
+    "id": 1002
+} 
+2024-02-04 00:21:17,311-root-INFO-server_pgvector[351]:type=clean cost_time=5.468143939971924
+2024-02-04 00:23:03,136-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[66]:Load pretrained SentenceTransformer: multi-qa-MiniLM-L6-cos-v1
+2024-02-04 00:23:03,682-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[105]:Use pytorch device: cuda
+2024-02-04 00:23:15,981-root-INFO-server_pgvector[361]:server listen at: 0.0.0.0:10201
+2024-02-04 00:24:57,475-root-INFO-server_pgvector[257]:2024-02-04 00:24:57.475443 receive request client=('127.0.0.1', 39110) param={
+    "type": "query",
+    "userId": "0",
+    "roleName": "paimon",
+    "question": "is a character named by some food for fun?"
+} 
+2024-02-04 00:24:57,475-root-INFO-server_pgvector[102]:collection_dict init start
+2024-02-04 00:24:57,484-root-INFO-server_pgvector[149]:bronya created
+2024-02-04 00:24:58,214-root-INFO-server_pgvector[149]:gwen created
+2024-02-04 00:24:58,289-root-INFO-server_pgvector[149]:hutao created
+2024-02-04 00:24:58,345-root-INFO-server_pgvector[149]:paimon created
+2024-02-04 00:24:58,363-root-INFO-server_pgvector[149]:silverwolf created
+2024-02-04 00:24:58,404-root-INFO-server_pgvector[149]:klee created
+2024-02-04 00:24:58,424-root-INFO-server_pgvector[149]:kokomi created
+2024-02-04 00:24:58,441-root-INFO-server_pgvector[135]:ganyu not created hasKnowledge=False
+2024-02-04 00:24:58,441-root-INFO-server_pgvector[135]:kafka not created hasKnowledge=False
+2024-02-04 00:24:58,441-root-INFO-server_pgvector[135]:kirara not created hasKnowledge=False
+2024-02-04 00:24:58,441-root-INFO-server_pgvector[135]:walnut not created hasKnowledge=False
+2024-02-04 00:24:58,441-root-INFO-server_pgvector[135]:yorforger not created hasKnowledge=False
+2024-02-04 00:24:58,441-root-INFO-server_pgvector[153]:collection_dict=7
+2024-02-04 00:24:58,460-root-ERROR-server_pgvector[339]:tuple index out of range
+Traceback (most recent call last):
+  File "G:\Devs\AI_Project\Embedding\pgvector-pg16-demo\server_pgvector.py", line 335, in do_POST
+    result_f["knowledge"] = result2[0][3]
+IndexError: tuple index out of range
+Stack (most recent call last):
+  File "G:\Devs\AI_Project\Embedding\pgvector-pg16-demo\server_pgvector.py", line 362, in <module>
+    server.serve_forever()
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 237, in serve_forever
+    self._handle_request_noblock()
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "G:\anaconda\envs\chromadb\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "G:\anaconda\envs\chromadb\lib\http\server.py", line 435, in handle
+    self.handle_one_request()
+  File "G:\anaconda\envs\chromadb\lib\http\server.py", line 423, in handle_one_request
+    method()
+  File "G:\Devs\AI_Project\Embedding\pgvector-pg16-demo\server_pgvector.py", line 339, in do_POST
+    logging.error(e, exc_info=True, stack_info=True)
+2024-02-04 00:24:58,460-root-INFO-server_pgvector[351]:type=query cost_time=0.984997034072876
+2024-02-04 00:28:08,320-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[66]:Load pretrained SentenceTransformer: multi-qa-MiniLM-L6-cos-v1
+2024-02-04 00:28:09,078-sentence_transformers.SentenceTransformer-INFO-SentenceTransformer[105]:Use pytorch device: cuda
+2024-02-04 00:28:21,036-root-INFO-server_pgvector[361]:server listen at: 0.0.0.0:10201
+2024-02-04 00:28:24,107-root-INFO-server_pgvector[257]:2024-02-04 00:28:24.107130 receive request client=('127.0.0.1', 39454) param={
+    "type": "query",
+    "userId": "0",
+    "roleName": "paimon",
+    "question": "is a character named by some food for fun?"
+} 
+2024-02-04 00:28:24,107-root-INFO-server_pgvector[102]:collection_dict init start
+2024-02-04 00:28:24,118-root-INFO-server_pgvector[149]:bronya created
+2024-02-04 00:28:25,487-root-INFO-server_pgvector[149]:gwen created
+2024-02-04 00:28:25,568-root-INFO-server_pgvector[149]:hutao created
+2024-02-04 00:28:25,630-root-INFO-server_pgvector[149]:paimon created
+2024-02-04 00:28:25,651-root-INFO-server_pgvector[149]:silverwolf created
+2024-02-04 00:28:25,696-root-INFO-server_pgvector[149]:klee created
+2024-02-04 00:28:25,719-root-INFO-server_pgvector[149]:kokomi created
+2024-02-04 00:28:25,737-root-INFO-server_pgvector[135]:ganyu not created hasKnowledge=False
+2024-02-04 00:28:25,738-root-INFO-server_pgvector[135]:kafka not created hasKnowledge=False
+2024-02-04 00:28:25,738-root-INFO-server_pgvector[135]:kirara not created hasKnowledge=False
+2024-02-04 00:28:25,738-root-INFO-server_pgvector[135]:walnut not created hasKnowledge=False
+2024-02-04 00:28:25,738-root-INFO-server_pgvector[135]:yorforger not created hasKnowledge=False
+2024-02-04 00:28:25,738-root-INFO-server_pgvector[153]:collection_dict=7
+2024-02-04 00:28:25,761-root-INFO-server_pgvector[351]:type=query cost_time=1.6547060012817383
+2024-02-04 00:28:36,933-root-INFO-server_pgvector[257]:2024-02-04 00:28:36.933458 receive request client=('127.0.0.1', 39482) param={
+    "type": "query",
+    "userId": "0",
+    "roleName": "paimon",
+    "question": "is a character named by some food for fun?"
+} 
+2024-02-04 00:28:36,933-root-INFO-server_pgvector[100]:collection_dict init done
+2024-02-04 00:28:36,971-root-INFO-server_pgvector[351]:type=query cost_time=0.03755998611450195
+2024-02-04 00:32:19,491-root-INFO-server_pgvector[257]:2024-02-04 00:32:19.491592 receive request client=('127.0.0.1', 39878) param={
+    "type": "insert",
+    "userId": "0",
+    "roleName": "paimon",
+    "question": "what's your partner name?",
+    "answer": "my partner name is Traveler.",
+    "id": 1002
+} 
+2024-02-04 00:32:19,728-root-INFO-server_pgvector[351]:type=insert cost_time=0.23717403411865234
+2024-02-04 00:34:04,916-root-INFO-server_pgvector[257]:2024-02-04 00:34:04.916848 receive request client=('127.0.0.1', 40087) param={
+    "type": "clean",
+    "userId": "0",
+    "roleName": "paimon",
+    "question": "what's your partner name?",
+    "answer": "my partner name is Traveler.",
+    "id": 1002
+} 
+2024-02-04 00:34:04,925-root-INFO-server_pgvector[351]:type=clean cost_time=0.008749008178710938
