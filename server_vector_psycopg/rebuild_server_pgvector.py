@@ -1,101 +1,72 @@
 import os
-import sys
-import json
-import argparse
-
-"""
-    命令行，日志
-"""
-
-# 1. 定义命令行解析器对象
-parser = argparse.ArgumentParser()
-# 2. 添加命令行参数
-parser.add_argument('--env', type=str, default='local')
-parser.add_argument('--port', type=int, default=10201)
-# 3. 从命令行中结构化解析参数
-args = parser.parse_args()
-env = args.env
-port = args.port
-
-token = 'seele_koko_pwd'
-vectordb_pre_path = os.path.join('db/persistance_db')
-logging_file_path = os.path.join('db/logging_db/vector.log')
-
-# 创建 vectordb_pre_path 如果它不存在
-if not os.path.exists(vectordb_pre_path):
-    os.makedirs(vectordb_pre_path)
-
-# 创建 logging_file_path 的父目录如果它不存在
-logging_dir = os.path.dirname(logging_file_path)
-if not os.path.exists(logging_dir):
-    os.makedirs(logging_dir)
-
-if env == 'test':
-    vectordb_pre_path = '/media/data2/koko/vector/'
-    logging_file_path = '/media/data2/koko/logs/vector.log'
-elif env == 'prod':
-    vectordb_pre_path = '/home/ubuntu/vectordb/'
-    logging_file_path = '/home/ubuntu/logs/vector.log'
-
 import logging
 from logging import handlers
-
-rota_handler = handlers.RotatingFileHandler(filename=logging_file_path,
-                                            maxBytes=10 * 1024 * 1024,  # 10M
-                                            backupCount=9,
-                                            encoding='utf-8')  # 日志切割：按文件大小
-ffmt = logging.Formatter("%(asctime)s-%(name)s-%(levelname)s-%(module)s[%(lineno)d]:%(message)s")
-rota_handler.setFormatter(ffmt)
-logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s-%(name)s-%(levelname)s-%(module)s[%(lineno)d]:%(message)s',
-                    datefmt='%Y-%m-%d %H:%M:%S')
-logging.getLogger().addHandler(rota_handler)
-
-
-"""
-    使用 psycopg 连接 pg
-"""
-from pgvector.psycopg import register_vector
+import argparse
 import psycopg
 from sentence_transformers import SentenceTransformer
-# 连接到数据库
-# Connect to an existing database
-# conn = psycopg.connect("dbname=test user=postgresml host=localhost port=5433")
-conn = psycopg.connect("dbname=test user=root password=root port=5432")
-# Open a cursor to perform database operations
-
-
-conn.execute('CREATE EXTENSION IF NOT EXISTS vector')
-register_vector(conn)
-# CREATE EXTENSION IF NOT EXISTS pgml;
-# SELECT pgml.version();
-cur = conn.cursor()
-# 造表
-cur.execute('CREATE TABLE IF NOT EXISTS documents (id bigserial PRIMARY KEY, userRole text, knowledge text, embedding vector(384))')
-# cur.execute("CREATE INDEX ON documents USING GIN (to_tsvector('english', knowledge))")
-
-# 执行一个查询
-# content = "testContent_1"
-# embedding = "testEmbeddings"
-# cur.execute('INSERT INTO documents (content, embedding) VALUES (%s, %s)', (content, embedding))
-
-
-# 初始化模型
-model = SentenceTransformer('multi-qa-MiniLM-L6-cos-v1')
-
-
-# for row in rows:
-#     print(row)
-
-
-"""
-    处理 知识库
-"""
-
+from http.server import HTTPServer, BaseHTTPRequestHandler
+import json
+from datetime import datetime
+import urllib.parse as urlparse
 import character_config
+from pgvector.psycopg import register_vector
 
+
+
+# Constants
+DEFAULT_ENV = 'local'
+DEFAULT_PORT = 10201
+TOKEN = 'seele_koko_pwd'
+VECTORD_DB_PATHS = {
+    'local': 'db/persistance_db',
+    'test': '/media/data2/koko/vector/',
+    'prod': '/home/ubuntu/vectordb/'
+}
+LOGGING_DB_PATHS = {
+    'local': 'db/logging_db/vector.log',
+    'test': '/media/data2/koko/logs/vector.log',
+    'prod': '/home/ubuntu/logs/vector.log'
+}
+
+# Global Variable
 collection_dict = {}
-def init_collection_dict():
+sql_simple = """
+    SELECT id, userRole, embedding, knowledge, 0 AS rank
+    FROM documents
+    ORDER BY embedding <=> %(embedding)s
+    LIMIT 5
+"""
+
+# Functions
+def parse_arguments():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--env', type=str, default=DEFAULT_ENV)
+    parser.add_argument('--port', type=int, default=DEFAULT_PORT)
+    return parser.parse_args()
+
+def setup_logging(env):
+    log_file_path = LOGGING_DB_PATHS[env]
+    os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
+    rota_handler = handlers.RotatingFileHandler(
+        filename=log_file_path, maxBytes=10 * 1024 * 1024, backupCount=9, encoding='utf-8')
+    ffmt = logging.Formatter("%(asctime)s-%(name)s-%(levelname)s-%(module)s[%(lineno)d]:%(message)s")
+    rota_handler.setFormatter(ffmt)
+    logging.basicConfig(level=logging.INFO, handlers=[rota_handler])
+
+def init_db_connection(env):
+    vectordb_pre_path = VECTORD_DB_PATHS[env]
+    os.makedirs(vectordb_pre_path, exist_ok=True)
+    conn = psycopg.connect("dbname=test user=root password=root port=5432")
+    conn.execute('CREATE EXTENSION IF NOT EXISTS vector')
+    register_vector(conn)
+    cur = conn.cursor()
+    cur.execute('CREATE TABLE IF NOT EXISTS documents (id bigserial PRIMARY KEY, userRole text, knowledge text, embedding vector(384))')
+    return conn, cur
+
+def init_sentence_transformer():
+    return SentenceTransformer('multi-qa-MiniLM-L6-cos-v1')
+
+def init_collection_dict(cur):
     if len(collection_dict) > 0:
         logging.info("collection_dict init done")
         return
@@ -151,59 +122,15 @@ def init_collection_dict():
             collection_dict[key] = {key: model.encode(character_config.knowledges.get(key))}
 
     logging.info(f'collection_dict={len(collection_dict)}')
-    
 
-# init_collection_dict()
+def run_http_server(port):
+    server = HTTPServer(('0.0.0.0', port), MyHttp)
+    logging.info("server listen at: %s:%s" % ('0.0.0.0', port))
+    server.serve_forever()
 
-"""
-    hybrid_search_rrf
-"""
-sql_rrf = """
-WITH semantic_search AS (
-    SELECT id, userRole, embedding, RANK () OVER (ORDER BY embedding <=> %(embedding)s) AS rank
-    FROM documents
-    ORDER BY embedding <=> %(embedding)s
-    LIMIT 20
-),
-keyword_search AS (
-    SELECT id, userRole, embedding, RANK () OVER (ORDER BY ts_rank_cd(to_tsvector('english', knowledge), query) DESC)
-    FROM documents, plainto_tsquery('english', %(query)s) query
-    WHERE to_tsvector('english', knowledge) @@ query
-    ORDER BY ts_rank_cd(to_tsvector('english', knowledge), query) DESC
-    LIMIT 20
-)
-SELECT
-    COALESCE(semantic_search.id, keyword_search.id) AS id,
-    COALESCE(semantic_search.userRole, keyword_search.userRole) AS userRole,
-    COALESCE(semantic_search.embedding, keyword_search.embedding) AS embedding,
-    COALESCE(1.0 / (%(k)s + semantic_search.rank), 0.0) +
-    COALESCE(1.0 / (%(k)s + keyword_search.rank), 0.0) AS score
-FROM semantic_search
-FULL OUTER JOIN keyword_search ON semantic_search.id = keyword_search.id
-ORDER BY score DESC
-LIMIT %(limit)s
-"""
-
-sql_simple = """
-    SELECT id, userRole, embedding, knowledge, 0 AS rank
-    FROM documents
-    ORDER BY embedding <=> %(embedding)s
-    LIMIT 5
-"""
-
-
-
-"""
-    建立 http 服务器
-"""
-
-from http.server import HTTPServer, BaseHTTPRequestHandler
-import json
-from datetime import datetime
-import urllib.parse as urlparse
-
-
+# Classes
 class MyHttp(BaseHTTPRequestHandler):
+    # ... (existing logic) ...
     def do_GET(self):
         url = urlparse.urlparse(self.path)
         path = url.path
@@ -278,7 +205,6 @@ class MyHttp(BaseHTTPRequestHandler):
         resp_code = 200
         result_f = {"type": "empty"}
         # 管理 collection 对象，获取gpt的记忆和修改
-        # collection = client.get_or_create_collection(name=f"{user_id}-{role_name}", embedding_function=ef)
         
         if user_id is None or type is None or role_name is None:
             resp_code = 400
@@ -356,14 +282,12 @@ class MyHttp(BaseHTTPRequestHandler):
         self.wfile.write(json.dumps(data).encode())
 
 
-host = ('0.0.0.0', port)
-server = HTTPServer(host, MyHttp)
-logging.info("server listen at: %s:%s" % host)
-server.serve_forever()
-
-
-
-conn.commit()
-
-cur.close()
-conn.close()
+# Main execution
+if __name__ == "__main__":
+    args = parse_arguments()
+    setup_logging(args.env)
+    conn, cur = init_db_connection(args.env)
+    model = init_sentence_transformer()
+    run_http_server(args.port)
+    cur.close()
+    conn.close()
