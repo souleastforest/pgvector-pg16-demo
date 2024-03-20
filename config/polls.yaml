@@ -1,0 +1,11 @@
+#  dsn = 'postgresql://root:root@localhost:5432/test'
+postgres:
+  database: test
+  user: root
+  password: root
+  host: localhost
+  port: 5432
+  minsize: 1
+  maxsize: 5
+host: 0.0.0.0
+port: 12345

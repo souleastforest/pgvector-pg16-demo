@@ -3,6 +3,7 @@ import sys
 import argparse
 import logging
 from logging import handlers
+import signal
 
 
 def setup_logging(env):
@@ -43,17 +44,15 @@ def setup_logging(env):
 
 
 # 若是Win32平台，需要设置event_loop_policy
-import asyncio
-import sys
+# import asyncio
+# import sys
 
-if sys.platform == 'win32':
-    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+# if sys.platform == 'win32':
+#     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-"""
-    使用 psycopg 连接 pg
-"""
+
 from pgvector.asyncpg import register_vector
-import psycopg
+
 from sentence_transformers import SentenceTransformer
 
 # 连接到数据库
@@ -84,7 +83,7 @@ from sentence_transformers import SentenceTransformer
 
 import character_config
 
-collection_dict = {}
+# collection_dict = {}
 async def init_collection_dict(pool):
     if len(collection_dict) > 0:
         logging.info("collection_dict init done")
@@ -142,7 +141,7 @@ async def init_collection_dict(pool):
 
 
 """
-    建立 epoll 服务器
+    建立服务器
     v1.0 完成功能逻辑: get请求返回文件，post请求返回json
     v1.1 重构了Post请求对应的处理函数
     v1.2 把HTTPServer修改为aiohttp server
@@ -157,8 +156,6 @@ import os
 from datetime import datetime
 import urllib.parse as urlparse
 
-# 连接池
-from psycopg_pool import AsyncConnectionPool
 
 async def handle_get(request):
     url = urlparse.urlparse(request.url)
@@ -200,7 +197,7 @@ async def handle_post(request):
         user_id = data['userId']
         role_name = data['roleName']
         type = request.match_info['type']
-
+        # todo: 请求体内的 type 检查 ？
         start_sec = datetime.timestamp(datetime.now())
         # 设置日志的data，用json.dumps(data, indent=4)格式化输出，indent=4表示缩进4个空格
         logging.info(f'{type} request received from {request.remote} with data: {json.dumps(data, indent=4)}')
@@ -304,35 +301,26 @@ async def handle_clean(data, user_id, role_name, pool):
             return 500, {}
 
 
-async def create_db_pool(loop):
-    return asyncpg.create_pool(dsn, loop=loop)
 
 async def init_db(app):
      """Initialize a connection pool."""
      app['pool'] = await asyncpg.create_pool(dsn=dsn, min_size=minconn, max_size=maxconn)
+     pool = app['pool']
+     async with pool.acquire() as conn:
+        async with conn.transaction():
+            await conn.execute('CREATE EXTENSION IF NOT EXISTS vector')
+            await conn.execute('CREATE TABLE IF NOT EXISTS documents (id bigserial PRIMARY KEY, userRole text, knowledge text, embedding vector(384))')
+            # 在服务器第一次启动前，初始化一次知识库
+            logging.info("Preheat the model, need 1~2s...")
+            embedding = model.encode("preheat the model")
+            await init_collection_dict(pool)
+
      yield
-     app['pool'].close()
+     logging.info('Closing connection pool')
+     await app['pool'].close()
+    #  await app['pool'].wait_closed()
 
-async def init_app():
-    global model
-    global dsn
-    global minconn, maxconn
-    global collection_dict
-
-    collection_dict = {}
-    minconn, maxconn = 10, 90
-    dsn = 'postgresql://root:root@localhost:5432/test'
-    model = SentenceTransformer('multi-qa-MiniLM-L6-cos-v1')
-
-    async with asyncpg.create_pool(dsn=dsn, min_size=minconn, max_size=maxconn) as pool:
-        async with pool.acquire() as conn:
-            async with conn.transaction():
-                await conn.execute('CREATE EXTENSION IF NOT EXISTS vector')
-                await conn.execute('CREATE TABLE IF NOT EXISTS documents (id bigserial PRIMARY KEY, userRole text, knowledge text, embedding vector(384))')
-                # 在服务器第一次启动前，初始化一次知识库
-                logging.info("Preheat the model, need 1~2s...")
-                embedding = model.encode("preheat the model")
-                await init_collection_dict(pool)
+def init_app():
     """Initialize the application server."""
     app = web.Application()
     # Create a database context
@@ -356,9 +344,17 @@ if __name__ == '__main__':
     port = args.port
     # 4. 启动服务
     setup_logging(env)
+    global model
+    global dsn
+    global minconn, maxconn
+    global collection_dict
 
-    # 启动时不需要使用连接池
-    # loop = asyncio.get_running_loop()
-    # app = loop.run_until_complete(init_app())
+    collection_dict = {}
+
+    minconn, maxconn = 10, 90
+    dsn = 'postgresql://root:root@localhost:5432/test'
+    # model = SentenceTransformer('multi-qa-MiniLM-L6-cos-v1')
+    model = SentenceTransformer('all-MiniLM-L6-v2')
+
     app = init_app()
     web.run_app(app, host='0.0.0.0', port=port)
